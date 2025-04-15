@@ -1,0 +1,11 @@
+{
+  "name": "crudgofgrasp",
+  "version": "1.0.0",
+  "description": "Sistema de cadastros com GRASP e Design Patterns",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "license": "MIT"
+}
