@@ -4,10 +4,15 @@ const ValidadorProduto = require("./ValidadorProduto");
 class ProdutoRepository {
     constructor() {
         this.produtos = [];
+        this.contadorId = 1;
     }
 
     criarProduto(dados) {
-        const produto = new Produto(dados);
+        const produto = new Produto({
+            id: this.contadorId++, // Atribui o próximo ID disponível
+            nome: dados.nome,
+            preco: dados.preco
+        });
         ValidadorProduto.validar(produto);
         this.produtos.push(produto);
         return produto;
